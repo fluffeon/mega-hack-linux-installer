@@ -19,3 +19,5 @@ Inside you'll find comments reffering to each directory necessary to make it wor
 11. Under the "Geometry Dash Folder" box, you must look for the full location of the game. Since we already know the game path from Step 3, you can browse to it (for example for me its on Z:/home/flookerton/.local/share/Steam/steamapps/common/Geometry Dash/GeometryDash.exe, but it will be different on your end)
 12. Install, close and open Geometry Dash. If everything goes well, the game will launch and you can press TAB to use the menu.
 13. Enjoy :3
+# Known issues
+- Arch Linux-specific: for some reason the executable requires Vulkan to run, and I got stuck trying to run the installer. Turns out my computer does not support Vulkan and it was freaking out. To fix it, install the proper Vulkan driver and remove any unnecessary ones. If your computer does not have Vulkan, you can install a software raster for it (but it must be 32-bit). For example, I did "pacman -S lib32-vulkan-swrast" and that got the installer to run finally. However, keep in mind that this is an AUR package and you'll have to compile it yourself or use the Chaotic-AUR to get it.
