@@ -1,5 +1,5 @@
-# small-script-to-install-mega-hack-v6-on-linux-without-doing-a-backflip
-Small script to install mega hack v6 on Linux without doing a backflip
+# Mega Hack Linux installer
+Small script to make it easier to set up Mega Hack on Linux. ChatGPT helped on this.
 # Things you'll need
 - Mega Hack v6 (V7 currently does not work in Linux as far as I know)
 - The script
