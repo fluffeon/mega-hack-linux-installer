@@ -28,3 +28,4 @@ Inside you'll find comments reffering to each directory necessary to make it wor
 13. Enjoy :3
 # Known issues
 - Arch Linux-specific: for some reason the executable requires Vulkan to run, and I got stuck trying to run the installer. Turns out my computer does not support Vulkan and it was freaking out. To fix it, install the proper Vulkan driver and remove any unnecessary ones. If your computer does not have Vulkan, you can install a software raster for it (but it must be 32-bit). For example, I did "pacman -S lib32-vulkan-swrast" and that got the installer to run finally. However, keep in mind that this is an AUR package and you'll have to compile it yourself or use the Chaotic-AUR to get it.
+- For some reason, Mega Hack installer won't open even if you input everything correctly. This is due to how the script parses backspaces, for now just try to be perfect and don't backspace at all
