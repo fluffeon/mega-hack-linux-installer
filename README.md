@@ -8,7 +8,7 @@ Small script to make it easier to set up Mega Hack on Linux. ChatGPT helped on t
 1. Clone this repository
 2. Locate your Steam folder. This can be done easily by opening Steam, right click on Geometry Dash, then hover on Manage and finally click Browse local files. Then once your file manager opens you can take note on where steam is located. In my case it is on ~/.local/share/Steam/
 3. While on the same folder, browse through Steam/steamapps/compatdata/322170/pfx/drive_c and copy your extracted Mega Hack v6 installation into it. Rename it so it doesn't have any spaces, it MUST NOT have spaces (for example I renamed the mega hack folder to "V6" and put it on the root of the C drive, so it ends up being "drive_c/V6/MegaHackPro.exe")
-4. Set the script as executable and run it.
+4. Set the script as executable and run `mh-linux-autoinstaller.sh`.
 5. Go through each input accordingly
 
 # How to do it (manual script, outdated... use the automated one)
