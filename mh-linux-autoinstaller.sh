@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to get user input
+# Function to handle backspaces properly (it might fuck up anyway)
 get_user_input() {
   read -p "$1" user_input
   echo "$user_input"
@@ -26,12 +26,9 @@ echo
 mega_hack_install_path=$(get_user_input "Write the path and executable to the Mega Hack installer (relative to the c_drive directory): C:/")
 
 # Constructing the full paths
-steam_path="$steam_installation_path/Steam"
-pfx_path="$steam_installation_path/steamapps/compatdata/322170/pfx"
 proton_path="$steam_installation_path/steamapps/common/$proton_version/proton"
-installer_path="$PWD/drive_c/$mega_hack_install_path"
 
-# Function to get user input with a prompt
+# Function to get user input with a consent prompt
 get_user_confirmation() {
   read -r -p "$1 (y/n): " response
   case "$response" in
@@ -40,7 +37,7 @@ get_user_confirmation() {
   esac
 }
 
-# Prompt for user settings
+# Say what the user is about to do so that they know that they're about to commit a oopsie or not
 echo
 echo 
 echo "Are these settings okay?"
@@ -62,9 +59,9 @@ if get_user_confirmation "Is everything correct?"; then
   # Exporting variables and running the installer with wine
   cd $steam_installation_path/steamapps/compatdata/322170/pfx
 PROTON_LOG=1 STEAM_COMPAT_CLIENT_INSTALL_PATH=''$steam_installation_path'' STEAM_COMPAT_DATA_PATH=''$steam_installation_path'/steamapps/compatdata/322170' WINEPREFIX=$PWD ''$steam_installation_path/steamapps/common/"$proton_version"/proton'' run ./drive_c/$mega_hack_install_path
-  echo Script made by flookerton and ChatGPT, but more so by the latter.
-  echo Bye bye!
-  echo If this script closes without showing anything, try again. For some reason it does that but if you pay attention and do it carefully it will work eventually.
+  echo 'Script made by flookerton and ChatGPT, but more so by the latter.'
+  echo 'Bye bye!'
+  echo 'If this script closes without showing anything, try again. For some reason it does that but if you pay attention and do it carefully it will work eventually. Ive noticed it does this if you backspaced on any of the inputs, so try to do it as perfectly as you can. Otherwise just copy and paste the commands it gave you and just run it that way'
   else
   echo "Quitting... Please input it again, you silly."
   exit 1
